@@ -10,6 +10,7 @@ import MobileNav from './components/layout/MobileNav';
 import AdminLayout from './components/layout/AdminLayout';
 import CartDrawer from './components/common/CartDrawer';
 import NotificationPopover from './components/common/NotificationPopover';
+import PixelMagnet from './components/ui/pixel-magnet';
 
 // Customer Pages
 import HomePage from './pages/HomePage';
@@ -80,31 +81,40 @@ function AppContent() {
   // Admin Portal Render
   if (currentRoute === 'admin') {
     if (!isAdminAuthenticated) {
-      return <AdminLoginPage onLoginSuccess={() => setAdminRoute('dashboard')} />;
+      return (
+        <>
+          <PixelMagnet primaryColor="#0066FF" secondaryColor="#38BDF8" />
+          <AdminLoginPage onLoginSuccess={() => setAdminRoute('dashboard')} />
+        </>
+      );
     }
 
     return (
-      <AdminLayout adminRoute={adminRoute} setAdminRoute={setAdminRoute} setCurrentRoute={setCurrentRoute}>
-        {adminRoute === 'dashboard' && <AdminDashboardPage setAdminRoute={setAdminRoute} />}
-        {adminRoute === 'orders' && <AdminOrdersPage />}
-        {adminRoute === 'customers' && <AdminCustomersPage />}
-        {adminRoute === 'products' && <AdminProductsPage />}
-        {adminRoute === 'display-services' && <AdminServicesPage />}
-        {adminRoute === 'doorstep-bookings' && <AdminBookingsPage />}
-        {adminRoute === 'membership' && <AdminMembershipPage />}
-        {adminRoute === 'offers' && <AdminOffersPage />}
-        {adminRoute === 'notifications' && <AdminNotificationsPage />}
-        {adminRoute === 'invoices' && <AdminInvoicesPage />}
-        {adminRoute === 'reports' && <AdminReportsPage />}
-        {adminRoute === 'settings' && <AdminSettingsPage />}
-        {adminRoute === 'admin-users' && <AdminUsersPage />}
-      </AdminLayout>
+      <>
+        <PixelMagnet primaryColor="#0066FF" secondaryColor="#38BDF8" />
+        <AdminLayout adminRoute={adminRoute} setAdminRoute={setAdminRoute} setCurrentRoute={setCurrentRoute}>
+          {adminRoute === 'dashboard' && <AdminDashboardPage setAdminRoute={setAdminRoute} />}
+          {adminRoute === 'orders' && <AdminOrdersPage />}
+          {adminRoute === 'customers' && <AdminCustomersPage />}
+          {adminRoute === 'products' && <AdminProductsPage />}
+          {adminRoute === 'display-services' && <AdminServicesPage />}
+          {adminRoute === 'doorstep-bookings' && <AdminBookingsPage />}
+          {adminRoute === 'membership' && <AdminMembershipPage />}
+          {adminRoute === 'offers' && <AdminOffersPage />}
+          {adminRoute === 'notifications' && <AdminNotificationsPage />}
+          {adminRoute === 'invoices' && <AdminInvoicesPage />}
+          {adminRoute === 'reports' && <AdminReportsPage />}
+          {adminRoute === 'settings' && <AdminSettingsPage />}
+          {adminRoute === 'admin-users' && <AdminUsersPage />}
+        </AdminLayout>
+      </>
     );
   }
 
   // Customer Portal Render
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900 selection:bg-brand-500 selection:text-white">
+      <PixelMagnet primaryColor="#0066FF" secondaryColor="#38BDF8" />
       <Navbar currentRoute={currentRoute} setCurrentRoute={setCurrentRoute} onSearch={(q) => setSearchQuery(q)} />
       
       <main className="flex-1 pb-16 md:pb-0">

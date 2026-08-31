@@ -1,0 +1,12 @@
+<svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="rvkGrad" x1="2" y1="2" x2="42" y2="42" gradientUnits="userSpaceOnUse">
+      <stop stopColor="#0066FF" />
+      <stop offset="1" stopColor="#0B132B" />
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="40" height="40" rx="10" fill="url(#rvkGrad)" stroke="#38BDF8" strokeWidth="2" />
+  <path d="M 12 14 L 12 30 M 12 14 L 19 14 C 21.5 14 21.5 20 19 20 L 12 20 M 16.5 20 L 21 30" stroke="#FFFFFF" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round" />
+  <path d="M 23 20 L 26.5 29 L 30 20" stroke="#38BDF8" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+  <path d="M 33 16 L 33 28 M 38 18 L 33 23 L 38 28" stroke="#FFFFFF" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+</svg>

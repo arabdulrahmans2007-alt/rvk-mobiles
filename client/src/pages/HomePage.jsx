@@ -5,6 +5,7 @@ import {
   Zap, Award, MapPin, Clock, ChevronRight
 } from 'lucide-react';
 import { useCart } from '../context/CartContext';
+import FallingRays from '../components/ui/falling-rays';
 
 export default function HomePage({ setCurrentRoute }) {
   const { addToCart, setIsCartOpen } = useCart();
@@ -44,6 +45,9 @@ export default function HomePage({ setCurrentRoute }) {
     <div className="space-y-16 pb-16 antialiased">
       {/* 1. HERO SECTION */}
       <section className="relative overflow-hidden bg-gradient-to-b from-navy-900 via-navy-850 to-navy-900 text-white pt-12 pb-20 px-4 sm:px-6 lg:px-8 border-b border-navy-700">
+        {/* React Bits Pro Falling Rays Background */}
+        <FallingRays rayCount={32} color1="#0066FF" color2="#38BDF8" rayWidth={2.4} pulseSpeed={1.1} />
+
         {/* Subtle Tech Glow Elements */}
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-10 w-80 h-80 bg-blue-600/10 rounded-full blur-2xl pointer-events-none" />

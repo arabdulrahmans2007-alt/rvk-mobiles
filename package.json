@@ -1,14 +1,15 @@
 {
   "name": "rvk-mobiles",
   "version": "1.0.0",
-  "description": "RVK MOBILES - Professional Mobile Shop & Service Management System",
+  "description": "RVK MOBILES - Professional Mobile Shop & Service Management Platform",
   "main": "server/index.js",
   "scripts": {
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "server": "node server/index.js",
     "client": "npm --prefix client run dev",
-    "build": "npm --prefix client run build",
-    "start": "NODE_ENV=production node server/index.js",
+    "build": "cd client && npm run build",
+    "vercel-build": "cd client && npm run build",
+    "start": "node server/index.js",
     "seed": "node server/seed.js"
   },
   "dependencies": {
@@ -19,5 +20,8 @@
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
     "sql.js": "^1.10.3"
+  },
+  "devDependencies": {
+    "vite": "^5.4.21"
   }
 }
